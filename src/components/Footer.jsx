@@ -15,7 +15,8 @@ const Footer = () => {
                             <div className="footer-social">
                                 <a href="#"><i className="fab fa-facebook-f"></i></a>
                                 <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#"><i className="fab fa-youtube"></i></a>
+                                <a href="https://www.youtube.com/@KingdomEnlightenmentMinistries" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                                <a href="https://www.tiktok.com/@kingdom_enlightment?lang=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
                                 <a href="#"><i className="fab fa-instagram"></i></a>
                             </div>
                         </div>
