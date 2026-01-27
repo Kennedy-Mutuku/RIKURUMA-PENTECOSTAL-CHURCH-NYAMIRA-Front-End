@@ -40,6 +40,9 @@ const Home = () => {
         return () => clearInterval(interval);
     }, [testimonials.length]);
 
+    const nextTestimonial = () => setCurrentTestimonial((currentTestimonial + 1) % testimonials.length);
+    const prevTestimonial = () => setCurrentTestimonial((currentTestimonial - 1 + testimonials.length) % testimonials.length);
+
     // Stats Counter logic (simplified for React)
     const [stats, setStats] = useState({ churches: 0, lives: 0, counties: 0, leaders: 0 });
     const statsRef = useRef(null);
@@ -83,6 +86,9 @@ const Home = () => {
         return () => clearInterval(interval);
     }, [activities.length]);
 
+    const nextActivity = () => setCurrentActivity((currentActivity + 1) % activities.length);
+    const prevActivity = () => setCurrentActivity((currentActivity - 1 + activities.length) % activities.length);
+
     // Choir Slider State
     const [currentChoir, setCurrentChoir] = useState(0);
     const choirs = [
@@ -109,6 +115,9 @@ const Home = () => {
         }, 3000);
         return () => clearInterval(interval);
     }, [choirs.length]);
+
+    const nextChoir = () => setCurrentChoir((currentChoir + 1) % choirs.length);
+    const prevChoir = () => setCurrentChoir((currentChoir - 1 + choirs.length) % choirs.length);
 
     useEffect(() => {
         if (statsVisible) {
@@ -267,6 +276,10 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
+                        <div className="slider-nav mobile-only">
+                            <button className="slider-prev" onClick={prevChoir}><i className="fas fa-chevron-left"></i></button>
+                            <button className="slider-next" onClick={nextChoir}><i className="fas fa-chevron-right"></i></button>
+                        </div>
                     </div>
 
                 </div>
@@ -330,6 +343,10 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
+                        <div className="slider-nav mobile-only">
+                            <button className="slider-prev" onClick={prevActivity}><i className="fas fa-chevron-left"></i></button>
+                            <button className="slider-next" onClick={nextActivity}><i className="fas fa-chevron-right"></i></button>
+                        </div>
                     </div>
 
                     <div className="events-cta">
@@ -363,6 +380,10 @@ const Home = () => {
                                 </div>
                             </div>
                         ))}
+                        <div className="slider-nav mobile-only">
+                            <button className="slider-prev" onClick={prevTestimonial}><i className="fas fa-chevron-left"></i></button>
+                            <button className="slider-next" onClick={nextTestimonial}><i className="fas fa-chevron-right"></i></button>
+                        </div>
                     </div>
                     <div className="testimonial-dots">
                         {testimonials.map((_, index) => (

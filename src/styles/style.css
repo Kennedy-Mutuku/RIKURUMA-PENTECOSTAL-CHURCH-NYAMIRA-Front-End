@@ -556,6 +556,23 @@ p {
 
 .slider-nav button:hover {
     background-color: var(--secondary-color);
+    color: var(--text-white);
+}
+
+/* Specific styling for light section sliders */
+.events-section .slider-nav button,
+.ministries-section .slider-nav button,
+.testimonials-section .slider-nav button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--primary-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.events-section .slider-nav button:hover,
+.ministries-section .slider-nav button:hover,
+.testimonials-section .slider-nav button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-white);
 }
 
 .slider-prev {
@@ -852,6 +869,21 @@ p {
         animation: fadeIn 0.5s ease;
     }
 
+    .choirs-grid .slider-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        z-index: 30;
+    }
+
+    .choirs-grid .slider-prev {
+        left: 5px;
+    }
+
+    .choirs-grid .slider-next {
+        right: 5px;
+    }
+
     .choir-info {
         padding: 15px;
     }
@@ -1133,6 +1165,23 @@ p {
         position: relative;
         margin-top: 30px;
         min-height: 500px;
+        margin-left: -12px;
+        margin-right: -12px;
+    }
+
+    .activities-slider .slider-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        z-index: 30;
+    }
+
+    .activities-slider .slider-prev {
+        left: 5px;
+    }
+
+    .activities-slider .slider-next {
+        right: 5px;
     }
 
     .activity-card {
@@ -2212,6 +2261,21 @@ p {
     .testimonials-slider {
         display: block;
         max-width: 800px;
+        position: relative;
+    }
+
+    .testimonials-slider .slider-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .testimonials-slider .slider-prev {
+        left: -10px;
+    }
+
+    .testimonials-slider .slider-next {
+        right: -10px;
     }
 
     .testimonial-card {
