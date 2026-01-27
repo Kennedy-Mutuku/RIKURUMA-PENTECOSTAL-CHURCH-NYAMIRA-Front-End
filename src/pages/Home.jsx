@@ -252,30 +252,18 @@ const Home = () => {
                     </div>
                     <div className="stats-grid">
                         <div className="stat-item">
-                            <div className="stat-icon">
-                                <i className="fas fa-church"></i>
-                            </div>
                             <div className="stat-number">{statsVisible ? stats.churches : 0}</div>
                             <div className="stat-label">Churches Planted</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-icon">
-                                <i className="fas fa-users"></i>
-                            </div>
                             <div className="stat-number">{statsVisible ? stats.lives : 0}</div>
                             <div className="stat-label">Lives Transformed</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-icon">
-                                <i className="fas fa-map-marked-alt"></i>
-                            </div>
                             <div className="stat-number">{statsVisible ? stats.counties : 0}</div>
                             <div className="stat-label">Counties Reached</div>
                         </div>
                         <div className="stat-item">
-                            <div className="stat-icon">
-                                <i className="fas fa-graduation-cap"></i>
-                            </div>
                             <div className="stat-number">{statsVisible ? stats.leaders : 0}</div>
                             <div className="stat-label">Leaders Trained</div>
                         </div>
