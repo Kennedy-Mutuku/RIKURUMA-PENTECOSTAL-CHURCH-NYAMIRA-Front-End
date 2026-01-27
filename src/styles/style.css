@@ -420,11 +420,19 @@ p {
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 1s ease;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s;
 }
 
 .slide.active {
     opacity: 1;
+    visibility: visible;
+    z-index: 2;
+}
+
+/* Maintain the previous slide during transition to prevent blank screen */
+.slide:not(.active) {
+    z-index: 1;
 }
 
 .slide-bg {
@@ -436,10 +444,12 @@ p {
     background-size: cover;
     background-position: center;
     z-index: -1;
+    transform: scale(1.1);
+    /* Base scale to avoid edges showing during rotation */
 }
 
 .slide.active .slide-bg {
-    animation: kenBurnsZoom 8s ease-out forwards;
+    animation: kenBurnsZoom 12s linear forwards;
 }
 
 @keyframes kenBurnsZoom {
@@ -448,7 +458,8 @@ p {
     }
 
     100% {
-        transform: scale(1) rotate(0deg);
+        transform: scale(1.05) rotate(0.5deg);
+        /* End slightly zoomed to keep it moving */
     }
 }
 
