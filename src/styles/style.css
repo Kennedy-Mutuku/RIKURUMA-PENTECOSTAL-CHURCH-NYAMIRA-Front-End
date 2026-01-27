@@ -991,7 +991,7 @@ p {
 /* ===================================
    Activities & Programs Section (Redesign)
    =================================== */
-.activities-grid {
+.activities-slider {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
@@ -1035,12 +1035,12 @@ p {
     padding: 30px;
 }
 
-.activity-info h3 {
+.activity-card h3 {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-light);
-    padding-bottom: 10px;
+    padding-bottom: 8px;
     display: inline-block;
 }
 
@@ -1082,12 +1082,95 @@ p {
 }
 
 @media (max-width: 992px) {
-    .activities-grid {
+    .activities-slider {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
 
     .activity-poster {
         height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .events-section .section-header {
+        margin-bottom: 25px;
+    }
+
+    .events-section {
+        padding: 40px 0 30px;
+    }
+
+    .activities-slider {
+        display: block;
+        position: relative;
+        margin-top: 30px;
+        min-height: 500px;
+    }
+
+    .activity-card {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .activity-card.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .activity-poster {
+        height: 350px;
+        margin: 0 -12px;
+        /* Touch edges professionaly */
+        border-radius: 0;
+    }
+
+    .activity-info {
+        padding: 20px 15px;
+    }
+
+    .activity-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .activity-details li {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .activity-poster {
+        height: 280px;
+    }
+
+    .activities-slider {
+        min-height: 450px;
+    }
+}
+
+@media (max-width: 360px) {
+    .activity-poster {
+        height: 240px;
+    }
+
+    .activity-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .activities-slider {
+        min-height: 420px;
     }
 }
 

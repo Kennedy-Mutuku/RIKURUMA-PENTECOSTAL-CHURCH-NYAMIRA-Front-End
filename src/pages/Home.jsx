@@ -45,16 +45,43 @@ const Home = () => {
     const statsRef = useRef(null);
     const [statsVisible, setStatsVisible] = useState(false);
 
+    // Activities Slider State
+    const [currentActivity, setCurrentActivity] = useState(0);
+    const activities = [
+        {
+            id: 1,
+            poster: '/images/activity-album-launch.png',
+            status: 'Successful Launch',
+            statusClass: 'success',
+            title: 'Trumpet of Yahweh: First Album',
+            description: "We celebrate the successful launch of our choir's first album, a journey of faith and praise that has finally come to fruition for the glory of God.",
+            details: [
+                { icon: 'fas fa-music', label: 'Songs', value: 'Umetutengeneza, Leo Kuna nini, Mwanadamu...' },
+                { icon: 'fas fa-calendar-check', label: 'Launched', value: '15th November 2025' },
+                { icon: 'fas fa-users', label: 'Choir', value: 'Trumpet of Yahweh (RPC Nyamira)' }
+            ]
+        },
+        {
+            id: 2,
+            poster: '/images/activity-revival.jpg',
+            status: 'Upcoming Revival',
+            statusClass: '',
+            title: 'Revival Meeting & Album Launch',
+            description: 'Join us for a powerful time of spiritual awakening and revival as we continue to celebrate the power of God in our midst.',
+            details: [
+                { icon: 'fas fa-user-tie', label: 'Hosts', value: 'Rev. Kepher & Susan Omondi' },
+                { icon: 'fas fa-microphone', label: 'Guests', value: 'Bishop Ezekiel Ndubi, Pastor Jackline Kevin' },
+                { icon: 'fas fa-clock', label: 'Time', value: 'Sat 15th Nov 2025 | 8:00 AM' }
+            ]
+        }
+    ];
+
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                setStatsVisible(true);
-                observer.disconnect();
-            }
-        });
-        if (statsRef.current) observer.observe(statsRef.current);
-        return () => observer.disconnect();
-    }, []);
+        const interval = setInterval(() => {
+            setCurrentActivity(prev => (prev + 1) % activities.length);
+        }, 6000);
+        return () => clearInterval(interval);
+    }, [activities.length]);
 
     useEffect(() => {
         if (statsVisible) {
@@ -280,41 +307,26 @@ const Home = () => {
                         <p className="section-description">Showcasing the mighty work of God through our various church activities and spiritual programs.</p>
                     </div>
 
-                    <div className="activities-grid">
-                        {/* Activity Card 1 */}
-                        <div className="activity-card">
-                            <div className="activity-poster">
-                                <img src="/images/activity-album-launch.png" alt="Choir Album Launch Poster" />
+                    <div className="activities-slider">
+                        {activities.map((activity, index) => (
+                            <div key={activity.id} className={`activity-card ${index === currentActivity ? 'active' : ''}`}>
+                                <div className="activity-poster">
+                                    <img src={activity.poster} alt={activity.title} />
+                                </div>
+                                <div className="activity-info">
+                                    <span className={`activity-status ${activity.statusClass}`}>{activity.status}</span>
+                                    <h3>{activity.title}</h3>
+                                    <p>{activity.description}</p>
+                                    <ul className="activity-details">
+                                        {activity.details.map((detail, dIndex) => (
+                                            <li key={dIndex}>
+                                                <i className={detail.icon}></i> <strong>{detail.label}:</strong> {detail.value}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                            <div className="activity-info">
-                                <span className="activity-status success">Successful Launch</span>
-                                <h3>Trumpet of Yahweh: First Album</h3>
-                                <p>We celebrate the successful launch of our choir's first album, a journey of faith and praise that has finally come to fruition for the glory of God.</p>
-                                <ul className="activity-details">
-                                    <li><i className="fas fa-music"></i> <strong>Songs:</strong> Umetutengeneza, Leo Kuna nini, Mwanadamu, Tazama jinsi, Apandaye Haba...</li>
-                                    <li><i className="fas fa-calendar-check"></i> <strong>Launched:</strong> 15th November 2025</li>
-                                    <li><i className="fas fa-users"></i> <strong>Choir:</strong> Trumpet of Yahweh (RPC Nyamira)</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Activity Card 2 */}
-                        <div className="activity-card">
-                            <div className="activity-poster">
-                                <img src="/images/activity-revival.jpg" alt="Revival Meeting Poster" />
-                            </div>
-                            <div className="activity-info">
-                                <span className="activity-status">Upcoming Revival</span>
-                                <h3>Revival Meeting & Album Launch</h3>
-                                <p>Join us for a powerful time of spiritual awakening and revival as we continue to celebrate the power of God in our midst.</p>
-                                <ul className="activity-details">
-                                    <li><i className="fas fa-user-tie"></i> <strong>Hosts:</strong> Rev. Kepher & Susan Omondi</li>
-                                    <li><i className="fas fa-microphone"></i> <strong>Guests:</strong> Bishop Ezekiel Ndubi, Pastor Jackline Kevin (NRB)</li>
-                                    <li><i className="fas fa-clock"></i> <strong>Time:</strong> Saturday 15th Nov 2025 | 8:00 AM</li>
-                                    <li><i className="fas fa-map-marker-alt"></i> <strong>Venue:</strong> Rikuruma Pentecostal Church</li>
-                                </ul>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
                     <div className="events-cta">
