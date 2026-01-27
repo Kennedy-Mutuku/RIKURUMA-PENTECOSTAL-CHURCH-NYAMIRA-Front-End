@@ -151,10 +151,7 @@ const Home = () => {
                             <Link to="/about" className="btn btn-primary">Read More About Us</Link>
                         </div>
                         <div className="about-image">
-                            <div className="image-placeholder">
-                                <i className="fas fa-image"></i>
-                                <span>About Image</span>
-                            </div>
+                            <img src="/images/about-church.jpg" alt="Rikuruma Pentecostal Church Nyamira Building" className="about-img" style={{ borderRadius: '15px', width: '100%', height: '400px', objectFit: 'cover', boxShadow: 'var(--shadow-lg)' }} />
                         </div>
                     </div>
                 </div>
