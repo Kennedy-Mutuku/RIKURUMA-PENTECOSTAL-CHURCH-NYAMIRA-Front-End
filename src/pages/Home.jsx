@@ -363,9 +363,20 @@ const Home = () => {
                     <div className="cta-content">
                         <h2>Partner With Us In Reaching The Lost</h2>
                         <p>Your prayers and generous giving enable us to continue spreading the Gospel and transforming lives.</p>
+
+                        <div className="mpesa-till-container">
+                            <div className="mpesa-header">
+                                <span className="lipa-na">LIPA NA</span>
+                                <span className="mpesa-text">M-PESA</span>
+                            </div>
+                            <div className="till-number">
+                                <span className="till-label">TILL NUMBER:</span>
+                                <span className="number">5173289</span>
+                            </div>
+                        </div>
+
                         <div className="cta-buttons">
-                            <Link to="/donate" className="btn btn-primary">Give Now</Link>
-                            <Link to="/contact" className="btn btn-secondary">Get Involved</Link>
+                            <Link to="/donate" className="btn btn-primary">Learn More About Giving</Link>
                         </div>
                     </div>
                 </div>
