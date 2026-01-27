@@ -65,6 +65,12 @@ img {
     padding: 0 20px;
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+}
+
 /* Typography */
 h1,
 h2,
@@ -146,6 +152,18 @@ p {
     padding: 80px 0;
 }
 
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 40px 0;
+    }
+}
+
 .section-header {
     text-align: center;
     margin-bottom: 50px;
@@ -184,6 +202,12 @@ p {
     background-color: var(--primary-dark);
     padding: 10px 0;
     font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 5px 0;
+    }
 }
 
 .top-bar-content {
@@ -242,6 +266,12 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 8px 0;
+    }
 }
 
 .logo a {
@@ -2073,25 +2103,35 @@ p {
 
 @media (max-width: 360px) {
     .hero-slider {
-        height: 340px;
+        height: 320px;
+        /* Even tighter */
+    }
+
+    .slide-content {
+        width: 95%;
+        /* Bring closer to margins */
+        top: 45%;
+        /* Move slightly up to utilize upper space */
     }
 
     .slide-content h2 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
     }
 
     .slide-content p {
-        font-size: 0.8rem;
-        margin-bottom: 12px;
+        font-size: 0.75rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
     }
 
     .btn {
-        padding: 8px 15px;
-        font-size: 0.85rem;
+        padding: 6px 15px;
+        font-size: 0.75rem;
     }
 
     .slide-buttons {
-        gap: 8px;
+        gap: 6px;
     }
 }
 
