@@ -247,56 +247,7 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="ministries-grid">
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-globe-africa"></i>
-                            </div>
-                            <h3>Evangelism & Missions</h3>
-                            <p>Reaching the unreached with the Gospel through crusades, door-to-door evangelism, and mission trips to remote areas.</p>
-                            <Link to="/ministries#evangelism" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-book-open"></i>
-                            </div>
-                            <h3>Discipleship</h3>
-                            <p>Building mature believers through systematic Bible study, mentorship programs, and spiritual growth initiatives.</p>
-                            <Link to="/ministries#discipleship" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-child"></i>
-                            </div>
-                            <h3>Youth Ministry</h3>
-                            <p>Empowering young people to know Christ and live purposefully through youth camps, conferences, and mentorship.</p>
-                            <Link to="/ministries#youth-ministry" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-female"></i>
-                            </div>
-                            <h3>Women Ministry</h3>
-                            <p>Equipping women to fulfill their God-given potential through fellowship, teaching, and empowerment programs.</p>
-                            <Link to="/ministries#women-ministry" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-male"></i>
-                            </div>
-                            <h3>Men Ministry</h3>
-                            <p>Building godly men who lead with integrity in their families, churches, and communities.</p>
-                            <Link to="/ministries#men-ministry" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                        <div className="ministry-card">
-                            <div className="ministry-icon">
-                                <i className="fas fa-hand-holding-heart"></i>
-                            </div>
-                            <h3>Community Outreach</h3>
-                            <p>Demonstrating Christ's love through feeding programs, medical camps, education support, and community development.</p>
-                            <Link to="/ministries#community-outreach" className="ministry-link">Learn More <i className="fas fa-arrow-right"></i></Link>
-                        </div>
-                    </div>
+
                 </div>
             </section>
 
