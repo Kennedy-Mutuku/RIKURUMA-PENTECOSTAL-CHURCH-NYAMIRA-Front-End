@@ -4,11 +4,16 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     // Hero Slider State
     const [currentSlide, setCurrentSlide] = useState(0);
-    const slides = [
+    const segments = [
         { image: '/images/hero-1.jpg', title: 'Welcome to Rikuruma Pentecostal Church', text: 'A Spirit-filled community transforming lives through the power of God in Nyamira', btn1: { text: 'Learn More', link: '/about' }, btn2: { text: 'Join Us', link: '/contact' } },
-        { image: '/images/hero-2.jpg', title: 'Experience His Presence', text: 'Where lives are touched and destinies are changed - Join us for worship', btn1: { text: 'Our Ministries', link: '/ministries' }, btn2: { text: 'Support Us', link: '/donate' } },
-        { image: '/images/hero-3.jpg', title: 'Growing Together in Faith', text: 'Building a strong foundation in Christ through fellowship and discipleship', btn1: { text: 'Our Programs', link: '/programs' }, btn2: { text: 'Upcoming Events', link: '/events' } }
+        { image: '/images/hero-2.jpg', title: 'Our Sanctuary', text: 'A place of refuge, prayer, and divine encounters for all people', btn1: { text: 'Our History', link: '/about#our-history' }, btn2: { text: 'Visit Us', link: '/contact' } },
+        { image: '/images/hero-3.jpg', title: 'Growing Together in Faith', text: 'Building a strong foundation in Christ through fellowship and discipleship', btn1: { text: 'Our Programs', link: '/programs' }, btn2: { text: 'Upcoming Events', link: '/events' } },
+        { image: '/images/hero-4.jpg', title: 'The Word of God', text: 'Preaching the unadulterated truth of the Gospel to transform generations', btn1: { text: 'Sermons', link: '/gallery' }, btn2: { text: 'Ministries', link: '/ministries' } },
+        { image: '/images/hero-5.jpg', title: 'Unity in Prayer', text: 'Fervent prayer and intercession for our community and the world', btn1: { text: 'Prayer Requests', link: '/contact' }, btn2: { text: 'Giving', link: '/donate' } }
     ];
+
+    // Using the original variable name 'slides' found in the code
+    const slides = segments;
 
     useEffect(() => {
         const interval = setInterval(() => {
