@@ -201,8 +201,51 @@ const Home = () => {
                 <div className="container">
                     <div className="section-header">
                         <span className="section-subtitle">What We Do</span>
-                        <h2 className="section-title">Our Ministries</h2>
-                        <p className="section-description">We serve through various ministries designed to meet the spiritual and physical needs of people at every stage of life.</p>
+                        <h2 className="section-title">Our Choirs & Ministries</h2>
+                        <p className="section-description">We serve through various ministries and musical groups designed to meet the spiritual and physical needs of people at every stage of life.</p>
+                    </div>
+
+                    {/* Our Choirs Section */}
+                    <div className="choirs-grid">
+                        <div className="choir-card">
+                            <div className="video-container">
+                                <iframe
+                                    src="https://www.youtube.com/embed/O9QnigyLpKY?si=8vKGjIdKnum1rsjr&autoplay=1&mute=1"
+                                    title="Born to Worship Singers"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                            <div className="choir-info">
+                                <h3>1. Born to Worship Singers</h3>
+                            </div>
+                        </div>
+                        <div className="choir-card">
+                            <div className="video-container">
+                                <iframe
+                                    src="https://www.youtube.com/embed/y7yKev9NPYI?si=ofoS8iDO1CDZ9_jN"
+                                    title="Agape Hearts Singers"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                            <div className="choir-info">
+                                <h3>2. Agape Hearts Singers</h3>
+                            </div>
+                        </div>
+                        <div className="choir-card">
+                            <div className="video-container">
+                                <iframe
+                                    src="https://www.youtube.com/embed/AaiI4I7-Bmw?si=z0t0kaagwnKeDW-t&start=12"
+                                    title="Trumpet of Yahweh Choir"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
+                            <div className="choir-info">
+                                <h3>3. Trumpet of Yahweh Choir</h3>
+                            </div>
+                        </div>
                     </div>
                     <div className="ministries-grid">
                         <div className="ministry-card">
