@@ -1273,6 +1273,186 @@ p {
     }
 }
 
+/* ===================================
+   Donate Page Styles
+   =================================== */
+.donate-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/images/activity-revival.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    color: var(--text-white);
+}
+
+.donate-header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.donate-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+}
+
+.donate-intro h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.scripture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.scripture-card {
+    background: var(--bg-white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    font-style: italic;
+    border-left: 5px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.scripture-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.scripture-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.scripture-card .reference {
+    display: block;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-style: normal;
+}
+
+.donation-methods {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.mpesa-donate-card {
+    background: #f4f4f4;
+    border: 2px solid #e0e0e0;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+}
+
+.mpesa-branding {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.mpesa-donate-card .lipa-na {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #4CAF50;
+    letter-spacing: 1px;
+}
+
+.mpesa-donate-card .mpesa-text {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #333;
+    font-style: italic;
+}
+
+.buy-goods-label {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.till-display {
+    border: 2px dashed #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background: white;
+}
+
+.till-display .label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.till-display .number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #333;
+    letter-spacing: 8px;
+    font-family: var(--font-secondary);
+}
+
+.mpesa-donate-card .instruction {
+    text-align: left;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.mpesa-donate-card .instruction ol {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.mpesa-donate-card .instruction li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.donate-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 992px) {
+    .scripture-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-header h1 {
+        font-size: 2.25rem;
+    }
+
+    .till-display .number {
+        font-size: 2rem;
+        letter-spacing: 4px;
+    }
+}
+
 .cta-buttons {
     display: flex;
     gap: 15px;

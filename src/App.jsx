@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import Home from './pages/Home';
 import About from './pages/About';
+import Donate from './pages/Donate';
 
 // Placeholder components for other pages
 const Placeholder = ({ title }) => (
@@ -28,7 +29,7 @@ function App() {
           <Route path="/events" element={<Placeholder title="Events" />} />
           <Route path="/gallery" element={<Placeholder title="Gallery" />} />
           <Route path="/contact" element={<Placeholder title="Contact Us" />} />
-          <Route path="/donate" element={<Placeholder title="Donate" />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
         <Footer />
         <BackToTop />
