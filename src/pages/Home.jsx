@@ -89,7 +89,8 @@ const Home = () => {
             <section className="hero-slider">
                 <div className="slider-container">
                     {slides.map((slide, index) => (
-                        <div key={index} className={`slide ${index === currentSlide ? 'active' : ''}`} style={{ backgroundImage: `url(${slide.image})` }}>
+                        <div key={index} className={`slide ${index === currentSlide ? 'active' : ''}`}>
+                            <div className="slide-bg" style={{ backgroundImage: `url(${slide.image})` }}></div>
                             <div className="slide-overlay"></div>
                             <div className="slide-content">
                                 <h2>{slide.title}</h2>
