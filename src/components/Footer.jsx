@@ -13,10 +13,10 @@ const Footer = () => {
                             </div>
                             <p>A Spirit-filled church spreading the Gospel, transforming lives, and building God's Kingdom in Nyamira and beyond.</p>
                             <div className="footer-social">
-                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                                <a href="https://www.facebook.com/profile.php?id=61579399991219" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
                                 <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
+                                <a href="https://www.youtube.com/@savedbychriststainedbylove" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                                <a href="https://www.tiktok.com/@rikurumapentecostal" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
                                 <a href="#"><i className="fab fa-instagram"></i></a>
                             </div>
                         </div>
