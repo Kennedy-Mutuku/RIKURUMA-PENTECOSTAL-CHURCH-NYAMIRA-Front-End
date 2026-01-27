@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import Home from './pages/Home';
+import About from './pages/About';
 
 // Placeholder components for other pages
 const Placeholder = ({ title }) => (
@@ -21,7 +22,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Placeholder title="About Us" />} />
+          <Route path="/about" element={<About />} />
           <Route path="/ministries" element={<Placeholder title="Ministries" />} />
           <Route path="/programs" element={<Placeholder title="Programs" />} />
           <Route path="/events" element={<Placeholder title="Events" />} />
