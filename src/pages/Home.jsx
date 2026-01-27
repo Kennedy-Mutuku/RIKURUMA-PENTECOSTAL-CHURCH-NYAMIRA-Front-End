@@ -131,9 +131,18 @@ const Home = () => {
                     </div>
                     <div className="about-content">
                         <div className="about-text">
-                            <p className="lead">Rikuruma Pentecostal Church Nyamira is a vibrant, Spirit-filled community of believers passionate about worshiping God and impacting our community with the Gospel of Jesus Christ.</p>
-                            <p>We are a church where the presence of God is evident, where lives are transformed by His power, and where every member is valued and nurtured in their faith journey. Our community is built on the foundation of God's Word and empowered by the Holy Spirit.</p>
-                            <p>Through dynamic worship services, powerful prayer meetings, and compassionate community outreach, we are committed to being a beacon of hope and light in Nyamira and beyond.</p>
+                            <p className="lead">
+                                Rikuruma Pentecostal Church is a Christ-centered, Bible-believing ministry dedicated to preaching the Gospel of Jesus Christ and raising disciples through the power of the Holy Spirit. Guided by the Word of God, we believe in the sovereignty and eternal existence of God.
+                            </p>
+                            <p>
+                                <strong>Located in Magwagwa, Nyamira County, Kenya</strong>
+                            </p>
+                            <p>
+                                Join us as we worship in spirit and in truth and grow together in faith. Our community is built on the foundation of God's Word and empowered by the Holy Spirit.
+                            </p>
+                            <p>
+                                Through dynamic worship services, powerful prayer meetings, and passionate community outreach, we are committed to being a beacon of hope and light in Nyamira and beyond.
+                            </p>
                             <div className="about-features">
                                 <div className="feature">
                                     <i className="fas fa-bible"></i>
@@ -443,7 +452,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </main>
+        </main >
     );
 };
 
