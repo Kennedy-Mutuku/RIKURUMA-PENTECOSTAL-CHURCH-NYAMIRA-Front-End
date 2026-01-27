@@ -913,6 +913,109 @@ p {
 }
 
 /* ===================================
+   Activities & Programs Section (Redesign)
+   =================================== */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.activity-card {
+    background-color: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(229, 57, 53, 0.2);
+}
+
+.activity-poster {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.activity-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition);
+}
+
+.activity-card:hover .activity-poster img {
+    transform: scale(1.05);
+}
+
+.activity-info {
+    padding: 30px;
+}
+
+.activity-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-light);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.activity-details {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.activity-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.activity-details li i {
+    color: var(--primary-color);
+    margin-top: 5px;
+    width: 20px;
+}
+
+.activity-status {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.activity-status.success {
+    background-color: #2e7d32;
+}
+
+@media (max-width: 992px) {
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-poster {
+        height: 400px;
+    }
+}
+
+/* ===================================
    Testimonials Section
    =================================== */
 .testimonials-section {

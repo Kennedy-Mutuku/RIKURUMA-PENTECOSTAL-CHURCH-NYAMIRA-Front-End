@@ -298,63 +298,54 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Events Section */}
+            {/* Activities & Programs Section */}
             <section className="events-section section">
                 <div className="container">
                     <div className="section-header">
-                        <span className="section-subtitle">Upcoming</span>
-                        <h2 className="section-title">Events & Programs</h2>
-                        <p className="section-description">Join us for our upcoming events and be part of what God is doing.</p>
+                        <span className="section-subtitle">Past & Present</span>
+                        <h2 className="section-title">Activities and Programs</h2>
+                        <p className="section-description">Showcasing the mighty work of God through our various church activities and spiritual programs.</p>
                     </div>
-                    <div className="events-grid">
-                        <div className="event-card">
-                            <div className="event-date">
-                                <span className="day">15</span>
-                                <span className="month">JAN</span>
+
+                    <div className="activities-grid">
+                        {/* Activity Card 1 */}
+                        <div className="activity-card">
+                            <div className="activity-poster">
+                                <img src="/images/activity-album-launch.png" alt="Choir Album Launch Poster" />
                             </div>
-                            <div className="event-content">
-                                <h3>Annual Prayer Conference</h3>
-                                <div className="event-meta">
-                                    <span><i className="fas fa-clock"></i> 9:00 AM - 5:00 PM</span>
-                                    <span><i className="fas fa-map-marker-alt"></i> Main Auditorium</span>
-                                </div>
-                                <p>A day of intense prayer and intercession for the nation and our ministries.</p>
-                                <Link to="/events" className="event-link">Learn More</Link>
-                            </div>
-                        </div>
-                        <div className="event-card">
-                            <div className="event-date">
-                                <span className="day">22</span>
-                                <span className="month">JAN</span>
-                            </div>
-                            <div className="event-content">
-                                <h3>Youth Revival Weekend</h3>
-                                <div className="event-meta">
-                                    <span><i className="fas fa-clock"></i> Friday - Sunday</span>
-                                    <span><i className="fas fa-map-marker-alt"></i> Youth Center</span>
-                                </div>
-                                <p>A powerful weekend of worship, word, and fellowship for young people.</p>
-                                <Link to="/events" className="event-link">Learn More</Link>
+                            <div className="activity-info">
+                                <span className="activity-status success">Successful Launch</span>
+                                <h3>Trumpet of Yahweh: First Album</h3>
+                                <p>We celebrate the successful launch of our choir's first album, a journey of faith and praise that has finally come to fruition for the glory of God.</p>
+                                <ul className="activity-details">
+                                    <li><i className="fas fa-music"></i> <strong>Songs:</strong> Umetutengeneza, Leo Kuna nini, Mwanadamu, Tazama jinsi, Apandaye Haba...</li>
+                                    <li><i className="fas fa-calendar-check"></i> <strong>Launched:</strong> 15th November 2025</li>
+                                    <li><i className="fas fa-users"></i> <strong>Choir:</strong> Trumpet of Yahweh (RPC Nyamira)</li>
+                                </ul>
                             </div>
                         </div>
-                        <div className="event-card">
-                            <div className="event-date">
-                                <span className="day">05</span>
-                                <span className="month">FEB</span>
+
+                        {/* Activity Card 2 */}
+                        <div className="activity-card">
+                            <div className="activity-poster">
+                                <img src="/images/activity-revival.jpg" alt="Revival Meeting Poster" />
                             </div>
-                            <div className="event-content">
-                                <h3>Community Outreach Day</h3>
-                                <div className="event-meta">
-                                    <span><i className="fas fa-clock"></i> 8:00 AM - 4:00 PM</span>
-                                    <span><i className="fas fa-map-marker-alt"></i> Various Locations</span>
-                                </div>
-                                <p>Join us as we serve our community with food, medical care, and the Gospel.</p>
-                                <Link to="/events" className="event-link">Learn More</Link>
+                            <div className="activity-info">
+                                <span className="activity-status">Upcoming Revival</span>
+                                <h3>Revival Meeting & Album Launch</h3>
+                                <p>Join us for a powerful time of spiritual awakening and revival as we continue to celebrate the power of God in our midst.</p>
+                                <ul className="activity-details">
+                                    <li><i className="fas fa-user-tie"></i> <strong>Hosts:</strong> Rev. Kepher & Susan Omondi</li>
+                                    <li><i className="fas fa-microphone"></i> <strong>Guests:</strong> Bishop Ezekiel Ndubi, Pastor Jackline Kevin (NRB)</li>
+                                    <li><i className="fas fa-clock"></i> <strong>Time:</strong> Saturday 15th Nov 2025 | 8:00 AM</li>
+                                    <li><i className="fas fa-map-marker-alt"></i> <strong>Venue:</strong> Rikuruma Pentecostal Church</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+
                     <div className="events-cta">
-                        <Link to="/events" className="btn btn-primary">View All Events</Link>
+                        <Link to="/events" className="btn btn-primary">View All Activities</Link>
                     </div>
                 </div>
             </section>
