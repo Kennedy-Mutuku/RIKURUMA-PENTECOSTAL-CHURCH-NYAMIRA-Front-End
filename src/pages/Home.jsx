@@ -5,9 +5,9 @@ const Home = () => {
     // Hero Slider State
     const [currentSlide, setCurrentSlide] = useState(0);
     const slides = [
-        { image: '/images/hero-1.jpg', title: 'Welcome to Kingdom Enlightenment', text: 'Spreading the Gospel, Transforming Lives, Building God\'s Kingdom', btn1: { text: 'Learn More', link: '/about' }, btn2: { text: 'Join Us', link: '/contact' } },
-        { image: '/images/hero-2.jpg', title: 'Go Into All The World', text: 'And preach the gospel to every creature - Mark 16:15', btn1: { text: 'Our Ministries', link: '/ministries' }, btn2: { text: 'Support Us', link: '/donate' } },
-        { image: '/images/hero-3.jpg', title: 'Making Disciples of All Nations', text: 'Teaching them to observe all things - Matthew 28:19-20', btn1: { text: 'Our Programs', link: '/programs' }, btn2: { text: 'Upcoming Events', link: '/events' } }
+        { image: '/images/hero-1.jpg', title: 'Welcome to Rikuruma Pentecostal Church', text: 'A Spirit-filled community transforming lives through the power of God in Nyamira', btn1: { text: 'Learn More', link: '/about' }, btn2: { text: 'Join Us', link: '/contact' } },
+        { image: '/images/hero-2.jpg', title: 'Experience His Presence', text: 'Where lives are touched and destinies are changed - Join us for worship', btn1: { text: 'Our Ministries', link: '/ministries' }, btn2: { text: 'Support Us', link: '/donate' } },
+        { image: '/images/hero-3.jpg', title: 'Growing Together in Faith', text: 'Building a strong foundation in Christ through fellowship and discipleship', btn1: { text: 'Our Programs', link: '/programs' }, btn2: { text: 'Upcoming Events', link: '/events' } }
     ];
 
     useEffect(() => {
@@ -23,9 +23,9 @@ const Home = () => {
     // Testimonials Slider State
     const [currentTestimonial, setCurrentTestimonial] = useState(0);
     const testimonials = [
-        { quote: "Through Kingdom Enlightenment Missions Team, I came to know Jesus Christ as my Lord and Savior. My life has never been the same. Today, I am a pastor leading a congregation of over 200 believers.", author: "Pastor John Kamau", location: "Nakuru County" },
-        { quote: "The youth ministry transformed my life completely. I was on the wrong path, but through the mentorship and discipleship programs, I found purpose and direction. Glory to God!", author: "Mary Wanjiku", location: "Nairobi County" },
-        { quote: "The community outreach program brought medical services and the Gospel to our village. Many were healed physically and spiritually. We thank God for this ministry.", author: "Chief Joseph Mutua", location: "Machakos County" }
+        { quote: "Rikuruma Pentecostal Church has been a blessing to my family. The teachings are biblical, the worship is powerful, and the fellowship is genuine. God is truly in this place!", author: "John Bosire", location: "Nyamira Town" },
+        { quote: "I found Christ at Rikuruma and my life was transformed. The youth ministry helped me grow in faith and discover my purpose. I am forever grateful to this church family.", author: "Grace Kemunto", location: "Nyamira County" },
+        { quote: "The prayers and support from this church carried me through difficult times. Rikuruma Pentecostal Church is more than a church - it's a family where God's love is demonstrated daily.", author: "David Ombati", location: "Nyamira" }
     ];
 
     useEffect(() => {
@@ -122,13 +122,13 @@ const Home = () => {
                 <div className="container">
                     <div className="section-header">
                         <span className="section-subtitle">Who We Are</span>
-                        <h2 className="section-title">About Kingdom Enlightenment Missions Team</h2>
+                        <h2 className="section-title">About Rikuruma Pentecostal Church Nyamira</h2>
                     </div>
                     <div className="about-content">
                         <div className="about-text">
-                            <p className="lead">Kingdom Enlightenment Missions Team is a Christ-centered missions organization dedicated to spreading the Gospel of Jesus Christ across Kenya and beyond.</p>
-                            <p>Founded on the Great Commission, we are committed to reaching the unreached, discipling believers, and establishing vibrant Christian communities. Our team comprises passionate men and women who have answered God's call to serve in various capacities.</p>
-                            <p>We believe in the power of the Gospel to transform lives and communities. Through our various ministries and programs, we seek to bring hope, healing, and the light of Christ to every corner of the land.</p>
+                            <p className="lead">Rikuruma Pentecostal Church Nyamira is a vibrant, Spirit-filled community of believers passionate about worshiping God and impacting our community with the Gospel of Jesus Christ.</p>
+                            <p>We are a church where the presence of God is evident, where lives are transformed by His power, and where every member is valued and nurtured in their faith journey. Our community is built on the foundation of God's Word and empowered by the Holy Spirit.</p>
+                            <p>Through dynamic worship services, powerful prayer meetings, and compassionate community outreach, we are committed to being a beacon of hope and light in Nyamira and beyond.</p>
                             <div className="about-features">
                                 <div className="feature">
                                     <i className="fas fa-bible"></i>
@@ -164,21 +164,21 @@ const Home = () => {
                                 <i className="fas fa-eye"></i>
                             </div>
                             <h3>Our Vision</h3>
-                            <p>To see every person in Kenya and beyond encounter the transforming love of Jesus Christ and become a committed disciple who impacts their world for God's Kingdom.</p>
+                            <p>To be a Spirit-empowered church that transforms Nyamira and beyond through the Gospel, raising up disciples who impact their generation for Christ.</p>
                         </div>
                         <div className="vm-card mission-card">
                             <div className="vm-icon">
                                 <i className="fas fa-bullseye"></i>
                             </div>
                             <h3>Our Mission</h3>
-                            <p>To glorify God by evangelizing the lost, discipling believers, equipping leaders, and planting churches that reproduce and multiply across nations.</p>
+                            <p>To worship God passionately, preach the Gospel boldly, disciple believers faithfully, and serve our community compassionately in the power of the Holy Spirit.</p>
                         </div>
                         <div className="vm-card values-card">
                             <div className="vm-icon">
                                 <i className="fas fa-heart"></i>
                             </div>
                             <h3>Our Values</h3>
-                            <p>Faith in God, Biblical Authority, Prayer, Excellence, Integrity, Unity, Compassion, and Servant Leadership guide everything we do.</p>
+                            <p>Spirit-led Worship, Biblical Truth, Fervent Prayer, Genuine Love, Community Service, and Christ-centered Living guide everything we do.</p>
                         </div>
                     </div>
                 </div>
@@ -408,9 +408,9 @@ const Home = () => {
                                 <div className="news-category">Missions</div>
                             </div>
                             <div className="news-content">
-                                <div className="news-date">December 10, 2024</div>
-                                <h3>Successful Mission Trip to Turkana County</h3>
-                                <p>Our team returned from a two-week mission trip to Turkana where over 500 people gave their lives to Christ...</p>
+                                <div className="news-date">January 15, 2026</div>
+                                <h3>New Year Miracle Service Testimonies</h3>
+                                <p>Our New Year service was marked by powerful testimonies of healing, deliverance, and breakthrough. God is moving mightily in Rikuruma...</p>
                                 <a href="#" className="news-link">Read More <i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -420,9 +420,9 @@ const Home = () => {
                                 <div className="news-category">Training</div>
                             </div>
                             <div className="news-content">
-                                <div className="news-date">December 5, 2024</div>
-                                <h3>Leadership Training Graduation Ceremony</h3>
-                                <p>50 new leaders graduated from our intensive leadership training program ready to serve in their communities...</p>
+                                <div className="news-date">January 8, 2026</div>
+                                <h3>Youth Revival Weekend Impact</h3>
+                                <p>Our first youth revival of the year saw over 100 young people encounter God's presence. Many rededicated their lives to Christ...</p>
                                 <a href="#" className="news-link">Read More <i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
@@ -432,9 +432,9 @@ const Home = () => {
                                 <div className="news-category">Outreach</div>
                             </div>
                             <div className="news-content">
-                                <div className="news-date">November 28, 2024</div>
-                                <h3>Medical Camp Serves Over 1,000 People</h3>
-                                <p>Our community outreach team organized a free medical camp that served over 1,000 people in rural Kitui...</p>
+                                <div className="news-date">December 28, 2025</div>
+                                <h3>Christmas Outreach Blesses Community</h3>
+                                <p>Our Christmas outreach program brought joy to hundreds of families in Nyamira with food donations and the message of hope...</p>
                                 <a href="#" className="news-link">Read More <i className="fas fa-arrow-right"></i></a>
                             </div>
                         </div>

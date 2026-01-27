@@ -9,14 +9,14 @@ const Footer = () => {
                     <div className="footer-grid">
                         <div className="footer-col">
                             <div className="footer-logo">
-                                <img src="/images/logo.png" alt="Kingdom Enlightenment Missions Team" className="footer-logo-img" />
+                                <img src="/images/logo.png" alt="Rikuruma Pentecostal Church Nyamira" className="footer-logo-img" />
                             </div>
-                            <p>Spreading the Gospel, Transforming Lives, Building God's Kingdom across Kenya and beyond.</p>
+                            <p>A Spirit-filled church spreading the Gospel, transforming lives, and building God's Kingdom in Nyamira and beyond.</p>
                             <div className="footer-social">
-                                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
                                 <a href="#"><i className="fab fa-twitter"></i></a>
-                                <a href="https://www.youtube.com/@KingdomEnlightenmentMinistries" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-                                <a href="https://www.tiktok.com/@kingdom_enlightment?lang=en" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                                <a href="#" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
                                 <a href="#"><i className="fab fa-instagram"></i></a>
                             </div>
                         </div>
@@ -48,15 +48,15 @@ const Footer = () => {
                             <ul className="contact-info">
                                 <li>
                                     <i className="fas fa-map-marker-alt"></i>
-                                    <span>P.O. Box 00000-00100<br />Nairobi, Kenya</span>
+                                    <span>Nyamira Town<br />Nyamira County, Kenya</span>
                                 </li>
                                 <li>
                                     <i className="fas fa-phone"></i>
-                                    <span>+254 714 476 295</span>
+                                    <span>+254 762 053 876</span>
                                 </li>
                                 <li>
                                     <i className="fas fa-envelope"></i>
-                                    <span>info@kingdomenlightenment.org</span>
+                                    <span>communityofbelieversinjesus@gmail.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -66,7 +66,7 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="container">
                     <div className="footer-bottom-content">
-                        <p>&copy; 2024 Kingdom Enlightenment Missions Team. All Rights Reserved.</p>
+                        <p>&copy; 2024 Rikuruma Pentecostal Church Nyamira. All Rights Reserved.</p>
                         <div className="footer-links">
                             <a href="#">Privacy Policy</a>
                             <a href="#">Terms of Service</a>
