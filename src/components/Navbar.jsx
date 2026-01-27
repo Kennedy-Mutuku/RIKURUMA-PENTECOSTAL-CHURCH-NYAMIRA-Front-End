@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const navRef = useRef(null);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
-        setActiveDropdown(null);
+        if (!mobileMenuOpen) setActiveDropdown(null);
     };
 
     const toggleDropdown = (e, index) => {
@@ -16,6 +17,24 @@ const Navbar = () => {
             setActiveDropdown(activeDropdown === index ? null : index);
         }
     };
+
+    // Close menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setMobileMenuOpen(false);
+                setActiveDropdown(null);
+            }
+        };
+
+        if (mobileMenuOpen || activeDropdown !== null) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [mobileMenuOpen, activeDropdown]);
 
     return (
         <>
@@ -39,7 +58,7 @@ const Navbar = () => {
             </div>
 
             {/* Header */}
-            <header className={`header ${mobileMenuOpen ? 'nav-open' : ''}`}>
+            <header className={`header ${mobileMenuOpen ? 'nav-open' : ''}`} ref={navRef}>
                 <div className="container">
                     <div className="header-content">
                         <div className="logo">
