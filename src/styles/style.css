@@ -2169,6 +2169,39 @@ p {
     .cta-buttons {
         flex-direction: column;
     }
+
+    .testimonials-section {
+        padding: 40px 0;
+    }
+
+    .testimonials-section .section-header {
+        margin-bottom: 25px;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .quote-icon {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-author {
+        margin-top: 15px;
+        padding-top: 15px;
+        gap: 12px;
+    }
+
+    .author-image {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2227,6 +2260,23 @@ p {
         padding: 8px 16px;
         font-size: 0.8rem;
     }
+
+    .testimonials-section {
+        padding: 30px 0;
+    }
+
+    .testimonial-card {
+        padding: 20px;
+    }
+
+    .testimonial-content p {
+        font-size: 0.9rem;
+    }
+
+    .author-image {
+        width: 45px;
+        height: 45px;
+    }
 }
 
 @media (max-width: 360px) {
@@ -2260,6 +2310,23 @@ p {
 
     .slide-buttons {
         gap: 6px;
+    }
+
+    .testimonials-section .section-header {
+        margin-bottom: 15px;
+    }
+
+    .testimonial-card {
+        padding: 15px;
+    }
+
+    .quote-icon {
+        font-size: 1.25rem;
+        margin-bottom: 8px;
+    }
+
+    .testimonial-author {
+        gap: 10px;
     }
 }
 
