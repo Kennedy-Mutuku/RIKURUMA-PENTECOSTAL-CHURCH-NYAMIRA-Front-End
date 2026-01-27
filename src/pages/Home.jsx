@@ -172,23 +172,14 @@ const Home = () => {
                 <div className="container">
                     <div className="vm-cards">
                         <div className="vm-card vision-card">
-                            <div className="vm-icon">
-                                <i className="fas fa-eye"></i>
-                            </div>
                             <h3>Our Vision</h3>
                             <p>To be a Spirit-empowered church that transforms Nyamira and beyond through the Gospel, raising up disciples who impact their generation for Christ.</p>
                         </div>
                         <div className="vm-card mission-card">
-                            <div className="vm-icon">
-                                <i className="fas fa-bullseye"></i>
-                            </div>
                             <h3>Our Mission</h3>
                             <p>To worship God passionately, preach the Gospel boldly, disciple believers faithfully, and serve our community compassionately in the power of the Holy Spirit.</p>
                         </div>
                         <div className="vm-card values-card">
-                            <div className="vm-icon">
-                                <i className="fas fa-heart"></i>
-                            </div>
                             <h3>Our Values</h3>
                             <p>Spirit-led Worship, Biblical Truth, Fervent Prayer, Genuine Love, Community Service, and Christ-centered Living guide everything we do.</p>
                         </div>
