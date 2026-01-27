@@ -210,7 +210,7 @@ const Home = () => {
                         <div className="choir-card">
                             <div className="video-container">
                                 <iframe
-                                    src="https://www.youtube.com/embed/O9QnigyLpKY?si=8vKGjIdKnum1rsjr&autoplay=1&mute=1"
+                                    src="https://www.youtube.com/embed/O9QnigyLpKY?si=Qel0bhomgbV2vD4-&start=12&autoplay=1&mute=1"
                                     title="Born to Worship Singers"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen>
@@ -223,7 +223,7 @@ const Home = () => {
                         <div className="choir-card">
                             <div className="video-container">
                                 <iframe
-                                    src="https://www.youtube.com/embed/y7yKev9NPYI?si=ofoS8iDO1CDZ9_jN"
+                                    src="https://www.youtube.com/embed/y7yKev9NPYI?si=1BkELlcqMarSchT1&start=10"
                                     title="Agape Hearts Singers"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen>
