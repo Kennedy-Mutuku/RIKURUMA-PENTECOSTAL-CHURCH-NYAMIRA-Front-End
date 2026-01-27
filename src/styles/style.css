@@ -1036,7 +1036,7 @@ p {
 }
 
 .activity-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 12px;
     color: var(--primary-color);
     border-bottom: 2px solid var(--secondary-light);
@@ -1054,8 +1054,8 @@ p {
     display: flex;
     align-items: flex-start;
     gap: 12px;
-    margin-bottom: 12px;
-    font-size: 1rem;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
     color: var(--text-color);
 }
 
@@ -1141,12 +1141,17 @@ p {
     }
 
     .activity-card h3 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
     }
 
     .activity-details li {
+        font-size: 0.8rem;
+        margin-bottom: 6px;
+    }
+
+    .activity-info p {
         font-size: 0.85rem;
-        margin-bottom: 8px;
+        line-height: 1.5;
     }
 }
 
@@ -1166,11 +1171,15 @@ p {
     }
 
     .activity-info h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    .activity-info p {
+        font-size: 0.75rem;
     }
 
     .activities-slider {
-        min-height: 420px;
+        min-height: 380px;
     }
 }
 
