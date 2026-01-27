@@ -835,6 +835,33 @@ p {
     }
 }
 
+@media (max-width: 768px) {
+    .choirs-grid {
+        display: block;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .choir-card {
+        display: none;
+        margin-bottom: 0;
+    }
+
+    .choir-card.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
+    .choir-info {
+        padding: 15px;
+    }
+
+    .choir-info h3 {
+        font-size: 1.1rem;
+    }
+}
+
+
 /* ===================================
    Statistics Section
    =================================== */
