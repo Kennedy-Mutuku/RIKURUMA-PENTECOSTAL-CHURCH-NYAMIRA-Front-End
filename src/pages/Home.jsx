@@ -210,7 +210,7 @@ const Home = () => {
                         <div className="choir-card">
                             <div className="video-container">
                                 <iframe
-                                    src="https://www.youtube.com/embed/O9QnigyLpKY?si=Qel0bhomgbV2vD4-&start=12&autoplay=1&mute=1"
+                                    src="https://www.youtube.com/embed/O9QnigyLpKY?si=Qel0bhomgbV2vD4-&start=12&autoplay=1&mute=1&playsinline=1"
                                     title="Born to Worship Singers"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen>
@@ -223,7 +223,7 @@ const Home = () => {
                         <div className="choir-card">
                             <div className="video-container">
                                 <iframe
-                                    src="https://www.youtube.com/embed/y7yKev9NPYI?si=1BkELlcqMarSchT1&start=10"
+                                    src="https://www.youtube.com/embed/y7yKev9NPYI?si=1BkELlcqMarSchT1&start=10&playsinline=1"
                                     title="Agape Hearts Singers"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen>
@@ -236,7 +236,7 @@ const Home = () => {
                         <div className="choir-card">
                             <div className="video-container">
                                 <iframe
-                                    src="https://www.youtube.com/embed/AaiI4I7-Bmw?si=z0t0kaagwnKeDW-t&start=12"
+                                    src="https://www.youtube.com/embed/AaiI4I7-Bmw?si=z0t0kaagwnKeDW-t&start=12&playsinline=1"
                                     title="Trumpet of Yahweh Choir"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowFullScreen>
