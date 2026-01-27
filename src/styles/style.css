@@ -2031,7 +2031,23 @@ p {
 
     .about-features {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .about-features .feature i {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+
+    .about-features .feature span {
+        font-size: 0.875rem;
+    }
+
+    .about-text .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 
     .event-card {
@@ -2098,6 +2114,26 @@ p {
 
     .stat-number {
         font-size: 2.5rem;
+    }
+
+    .about-features {
+        gap: 8px;
+        margin: 15px 0;
+    }
+
+    .about-features .feature i {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+
+    .about-features .feature span {
+        font-size: 0.8rem;
+    }
+
+    .about-text .btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
     }
 }
 
