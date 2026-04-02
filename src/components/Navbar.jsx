@@ -1,10 +1,34 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Navbar = () => {
+    const { user } = useAuth();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
+    const [headerHeight, setHeaderHeight] = useState(0);
     const navRef = useRef(null);
+    const headerWrapperRef = useRef(null);
+
+    // Measure header height for spacer
+    useEffect(() => {
+        const updateHeaderHeight = () => {
+            if (headerWrapperRef.current) {
+                setHeaderHeight(headerWrapperRef.current.offsetHeight);
+            }
+        };
+
+        updateHeaderHeight();
+        window.addEventListener('resize', updateHeaderHeight);
+        
+        // Initial delay to ensure styles are applied
+        const timer = setTimeout(updateHeaderHeight, 100);
+
+        return () => {
+            window.removeEventListener('resize', updateHeaderHeight);
+            clearTimeout(timer);
+        };
+    }, []);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
@@ -38,20 +62,29 @@ const Navbar = () => {
 
     return (
         <>
+            <div className="main-header-wrapper" ref={headerWrapperRef}>
             {/* Top Bar */}
             <div className="top-bar">
                 <div className="container">
                     <div className="top-bar-content">
-                        <div className="top-bar-left">
-                            <span><i className="fas fa-envelope"></i> communityofbelieversinjesus@gmail.com</span>
-                            <span><i className="fas fa-phone"></i> +254 762 053 876</span>
+                        <div className="top-bar-email-row">
+                            <a href="mailto:communityofbelieversinjesus@gmail.com">
+                                <i className="fas fa-envelope"></i> communityofbelieversinjesus@gmail.com
+                            </a>
                         </div>
-                        <div className="top-bar-right">
-                            <a href="https://www.facebook.com/profile.php?id=61579399991219" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="https://www.youtube.com/@savedbychriststainedbylove" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
-                            <a href="https://www.tiktok.com/@rikurumapentecostal" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
+                        <div className="top-bar-info-row">
+                            <div className="top-bar-phone">
+                                <a href="tel:+254762053876">
+                                    <i className="fas fa-phone"></i> +254 762 053 876
+                                </a>
+                            </div>
+                            <div className="top-bar-socials">
+                                <a href="https://www.facebook.com/profile.php?id=61579399991219" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+                                <a href="#"><i className="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/@savedbychriststainedbylove" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+                                <a href="https://www.tiktok.com/@rikurumapentecostal" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
+                                <a href="#"><i className="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,6 +104,9 @@ const Navbar = () => {
                             </Link>
                         </div>
                         <nav className="main-nav">
+                            {/* Overlay for mobile menu */}
+                            <div className={`nav-overlay ${mobileMenuOpen ? 'active' : ''}`} onClick={() => setMobileMenuOpen(false)}></div>
+                            
                             <ul className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
                                 <li><NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMobileMenuOpen(false)}>Home</NavLink></li>
                                 <li className={`dropdown ${activeDropdown === 1 ? 'active' : ''}`}>
@@ -107,9 +143,16 @@ const Navbar = () => {
                                 <li><NavLink to="/events" onClick={() => setMobileMenuOpen(false)}>Events</NavLink></li>
                                 <li><NavLink to="/gallery" onClick={() => setMobileMenuOpen(false)}>Gallery</NavLink></li>
                                 <li><NavLink to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact</NavLink></li>
-                                <li className="mobile-only"><Link to="/donate" className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>Donate Now</Link></li>
+                                <li className="mobile-only">
+                                    <Link to={user ? "/dashboard" : "/login"} className="btn btn-primary" onClick={() => setMobileMenuOpen(false)}>
+                                        {user ? user.fullName.split(' ')[0] : 'Login'}
+                                    </Link>
+                                </li>
                             </ul>
                             <div className="nav-buttons">
+                                <Link to={user ? "/dashboard" : "/login"} className="btn btn-outline" style={{ marginRight: '10px' }}>
+                                    {user ? user.fullName.split(' ')[0] : 'Login'}
+                                </Link>
                                 <Link to="/donate" className="btn btn-primary">Donate</Link>
                             </div>
                             <div className={`mobile-menu-toggle ${mobileMenuOpen ? 'active' : ''}`} onClick={toggleMobileMenu}>
@@ -121,6 +164,8 @@ const Navbar = () => {
                     </div>
                 </div>
             </header>
+            </div>
+            <div className="header-spacer" style={{ height: `${headerHeight}px` }}></div>
         </>
     );
 };
